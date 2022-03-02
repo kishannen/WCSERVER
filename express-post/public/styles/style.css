@@ -1,0 +1,45 @@
+body{
+  display: flex;
+  background-color: #49a5cf;
+  justify-content: center;
+  height: 50vh;
+  font-family: Arial, Helvetica, sans-serif;
+  align-items: center;
+}
+
+form{
+  background-color: #b7dff1;
+  padding: 20px;
+  box-sizing: border-box;
+  box-shadow: 2px 2px 2px rgb(170, 168, 165);
+  width: 50%;
+  margin-top: auto;
+}
+h3{
+  font-size: 25px;
+  text-align: center;
+}
+
+p{
+  padding-left: 10px;
+}
+
+td{
+  padding: 12px 0px 12px 0px;
+}
+
+input, select{
+  text-align: justify;
+  padding: 5px 2px 2px;
+}
+
+.proceed input{
+  margin-top: 10px;
+  display: inline-block;
+}
+
+.proceed input:hover{
+  transition: 0.3s;
+  background-color: #8f7461;
+  color: #b4b3b3;
+}
