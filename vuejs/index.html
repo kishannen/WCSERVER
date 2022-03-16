@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <script src="https://unpkg.com/vue@3.0.3"></script>
+  <title>VUE JS DEMO APPLICATION</title>
+</head>
+<body>
+  <div id="app">
+    <!-- This portion is controlled by Vue-->
+    <h2> DIRECTIVES </h2>
+    <p>{{ title }} - {{ author }} - {{ age }}</p> 
+     <!-- Events on Vue using v-on -->
+     <button v-on:click="age++"> Get Older</button>
+     <button v-on:click="age--"> Get Younger</button>
+     <button @click="title = 'The title has changed!'"> Change Title </button>
+  </div>
+  <!-- Not controlled by Vue -->
+
+  <!-- TWO WAY DATA BINDING -->
+  <div id="two-way-binding">
+    <h2> Two-Way Data Binding </h2>
+    <p>{{ message }}</p>
+    <input v-model="message">
+  </div>
+
+  <!-- USING V-IF -->
+  <div id="conditional-rendering">
+    <h2> v-if Statement </h2>
+    <span v-if="seen">Now you see me!</span>
+  </div>
+
+  <!-- this is hooked up to a method in the books.js -->
+  <div id="books">
+    <h2>v-if and v-else statements</h2>
+    <div V-if="showBooks">
+      <p> {{ btitle }} - {{ bauthor }} - {{ year }} </p>
+    </div>
+
+    <button @click="toggleShowBooks">
+      <span V-if="showBooks"> Hide Books </span>
+      <span V-else> Show Books </span>
+    </button>
+  </div>
+
+  <!-- using v-for directive -->
+  <div id="list-rendering">
+    <h2>v-for</h2>
+    <ol>
+      <li v-for="todo in todos"> {{ todo.text }} </li>
+    </ol>
+  </div>
+
+  <!-- Link to JS File -->
+  <script src="app.js"></script>
+  <script src="twoway.js"></script>
+  <script src="conditionalif.js"></script>
+  <script src="book.js"></script>
+  <script src="listfor.js"></script>
+</body>
+</html>
